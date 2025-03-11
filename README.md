@@ -18,5 +18,5 @@ A simple **CRUD (Create, Read, Update, Delete) application** built using **Node.
 
 ### **1️⃣ Clone the Repository**
 ```sh
-git clone https://github.com/yourusername/ejs-crud-app.git
+git clone https://github.com/BhushanPandagre/Ejs_Curd.git
 cd ejs-crud-app
