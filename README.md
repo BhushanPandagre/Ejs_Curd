@@ -25,4 +25,5 @@ npm install
 
 MONGODB_URI=mongodb+srv://pandagrebhushan3:<your_password>@cluster0.qrkc7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 PORT=3000
+nodemon server.js
 
