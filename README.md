@@ -23,6 +23,6 @@ cd ejs-crud-app
 
 npm install
 
-MONGODB_URI=mongodb+srv://pandagrebhushan3:Dm01hcb4a9TN9bJN@cluster0.qrkc7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+MONGODB_URI=mongodb+srv://pandagrebhushan3:<your_password>@cluster0.qrkc7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 PORT=3000
 
