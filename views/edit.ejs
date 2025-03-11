@@ -1,0 +1,113 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edit Item</title>
+</head>
+<body>
+    <h1>Edit Item</h1>
+    <form action="/items/<%= item._id %>?_method=PUT" method="POST">
+        <input type="text" name="name" value="<%= item.name %>" required>
+        <textarea name="description" required><%= item.description %></textarea>
+        <button type="submit">Update</button>
+    </form>
+    <a href="/">Back</a>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Item</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            width: 100%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            box-sizing: border-box; /* Prevents overflow */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box; /* Ensures input stays within container */
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .update-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .update-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .back-btn {
+            text-decoration: none;
+            color: white;
+            background-color: #6c757d;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .back-btn:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+    <h1>Edit Item</h1>
+    <div class="container">
+        <form action="/items/<%= item._id %>?_method=PUT" method="POST">
+            <input type="text" name="name" value="<%= item.name %>" required>
+            <textarea name="description" required><%= item.description %></textarea>
+            <button type="submit" class="update-btn">Update</button>
+        </form>
+    </div>
+    <a href="/" class="back-btn">Back</a>
+</body>
+</html>

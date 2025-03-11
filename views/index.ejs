@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+      }
+
+      h1 {
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .add-btn {
+        text-decoration: none;
+        color: white;
+        background-color: #007bff;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 15px;
+      }
+
+      .add-btn:hover {
+        background-color: #0056b3;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        background: #fff;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .item-info {
+        flex-grow: 1;
+        text-align: left;
+        font-size: 16px;
+      }
+
+      .actions {
+        display: flex;
+        gap: 10px;
+      }
+
+      .edit-btn,
+      .delete-btn {
+        text-decoration: none;
+        color: white;
+        padding: 5px 12px;
+        border-radius: 5px;
+        font-size: 14px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .edit-btn {
+        background-color: #28a745;
+      }
+
+      .edit-btn:hover {
+        background-color: #218838;
+      }
+
+      .delete-btn {
+        background-color: #dc3545;
+      }
+
+      .delete-btn:hover {
+        background-color: #c82333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Items List</h1>
+      <a href="/new" class="add-btn">Add New Item</a>
+      <ul>
+        <% items.forEach(item => { %>
+        <li>
+          <div class="item-info">
+            <strong><%= item.name %></strong> - <%= item.description %>
+          </div>
+          <div class="actions">
+            <a href="/edit/<%= item._id %>" class="edit-btn">Edit</a>
+            <form action="/items/<%= item._id %>?_method=DELETE" method="POST">
+              <button type="submit" class="delete-btn">Delete</button>
+            </form>
+          </div>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
+  </body>
+</html>
