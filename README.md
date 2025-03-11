@@ -20,3 +20,5 @@ A simple **CRUD (Create, Read, Update, Delete) application** built using **Node.
 ```sh
 git clone https://github.com/BhushanPandagre/Ejs_Curd.git
 cd ejs-crud-app
+
+npm install
